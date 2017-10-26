@@ -75,11 +75,5 @@ dev.off()
 
 
 ==== wordcloud ======
-  wordcloud(corpus, min.freq=3, scale=c(4,0.2), colors=brewer.pal(8, "Dark2"),random.color=TRUE, random.order=FALSE, max.words=150)
 
-==== another aproach wordcloud ====
-  r30.matrix <-as.matrix(r30.tdm)
-wordFreq.sort <-sort(rowSums(r30.matrix), decreasing=T)
-set.seed(1234)
-grayLevels <-gray((wordFreq.sort +10) / (max(wordFreq.sort)+10))
-word.cloud<- wordcloud(words=names(wordFreq.sort), freq=wordFreq.sort, min.freq=3, random.order=F, colors=grayLevels)
+wordcloud(corpus, min.freq=3, scale=c(4,0.2), colors=brewer.pal(8, "Dark2"),random.color=TRUE, random.order=FALSE, max.words=150)
